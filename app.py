@@ -7,11 +7,10 @@ from faster_whisper import WhisperModel
 app = Flask(__name__)
 
 # 配置管理
-MAX_CONTENT_LENGTH = int(os.getenv('MAX_CONTENT_LENGTH', 16 * 1024 * 1024))  # 默认 16MB
-app.config['MAX_CONTENT_LENGTH'] = MAX_CONTENT_LENGTH
+MODEL_SIZE = os.getenv('MODEL_SIZE', 'large-v3')
 
 # 加载模型
-model = WhisperModel("large-v3",device="cuda", compute_type="float16")
+model = WhisperModel(MODEL_SIZE,device="cuda", compute_type="float16")
 
 
 # 日志配置

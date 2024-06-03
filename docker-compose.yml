@@ -6,8 +6,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - MODEL_PATH=base
-      - MAX_CONTENT_LENGTH=16777216  # 16MB
+      - MODEL_SIZE=large-v3
     volumes:
       - ./tmp:/tmp  # 挂载 /tmp 目录用于临时文件存储
       - ./whisper-cache:/root/.cache  # 挂载缓存
