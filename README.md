@@ -14,7 +14,3 @@ The API accepts the following parameters:
 - `temperature`: A float value for the temperature parameter.
 - `timestamp_granularities[]`: A list of timestamp granularities.
 The API will return a transcription of the audio in the requested format. If there is an error processing the request, the API will return a 400 or 500 error with an error message.
-## Installation
-Here you may include instructions on how to install your project.
-## Contributing
-Here you may include information on how others can contribute to your project.
